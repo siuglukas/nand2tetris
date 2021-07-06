@@ -9,10 +9,17 @@
  *       b otherwise
  */
 
+
+ //Multiplexor:
+ // Two inputs.
+
 CHIP Mux {
     IN a, b, sel;
     OUT out;
 
     PARTS:
-    // Put your code here:
+    Not(in=sel, out=notSel);
+    And(a=a, b=notSel, out=selA);
+    And(a=b, b=sel, out=selB);
+    Or(a=selA, b=selB, out=out);
 }
