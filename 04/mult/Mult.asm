@@ -9,39 +9,6 @@
 // This program only needs to handle arguments that satisfy
 // R0 >= 0, R1 >= 0, and R0*R1 < 32768.
 
-// Put your code here.
-
-// @sum 
-// M=0
-// @R0 
-// D=M
-// @REG0 
-// M=D
-
-// (LOOP)
-// @R1    
-// D=M  
-// @sum
-// M=M+D 
-// @REG0  
-// M=M-1
-// D=M
-
-// @R2
-// M=0
-
-// @LOOP
-// D;JGT
-
-// @sum
-// D=M
-// @R2
-// M=D
-
-// (END)
-// @END
-
-// 0;JMP
 
 
 // 5*3 in pseudocode:
